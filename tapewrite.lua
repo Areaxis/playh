@@ -1,0 +1,21 @@
+tape = peripheral.find("tape_drive")
+term.clear()
+if tape == nil then
+prin("No Tape Drive found!")
+else
+print("TapeWriter for Revelation")
+print("Where's the music at?")
+write("URL:")
+url = read()
+local response = http.get(url, nil, true)
+print("Downloading")
+tape.seek(-tape.getPosition())
+tape.write(response.readAll())
+response.close()
+tape.seek(-tape.getPosition())
+print("Got a name for this tape?")
+write("Name:")
+name = read()
+tape.setLabel(name)
+print("Done!")
+end
