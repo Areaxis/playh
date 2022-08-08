@@ -38,8 +38,8 @@ if readspeed < 5 then
     readspeed = 5
 end
 local shortspeed = 0.1
-local b = require("./button").monitor
-local bf = require("./bigfont")
+local b = dofile("./button.lua").monitor
+local bf = dofile("./bigfont.lua")
 local periphs = peripheral.getNames()
 local m = peripheral.find("monitor", filter)
 local s = peripheral.find("tape_drive")
