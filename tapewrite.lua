@@ -1,7 +1,7 @@
 tape = peripheral.find("tape_drive")
 term.clear()
 if tape == nil then
-prin("No Tape Drive found!")
+print("No Tape Drive found!")
 else
 print("TapeWriter for Revelation")
 print("Where's the music at?")
